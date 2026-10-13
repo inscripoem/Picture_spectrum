@@ -1,0 +1,30 @@
+{
+  "version": "original_python",
+  "commit": "31ffdbb",
+  "system": {
+    "python": "3.13.3",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "gpu": "NVIDIA GeForce RTX 3070, 8192 MiB"
+  },
+  "params": {
+    "sample_rate": 44100,
+    "start_freq": 10000,
+    "spacing_ms": 50,
+    "freq_step": 10
+  },
+  "timestamp": "2026-06-16 14:02:58",
+  "benchmarks": {
+    "large": {
+      "python": {
+        "median": 61.98243724700296,
+        "min": 60.382383434000076,
+        "max": 63.350237209000625,
+        "runs": [
+          60.382383434000076,
+          61.98243724700296,
+          63.350237209000625
+        ]
+      }
+    }
+  }
+}

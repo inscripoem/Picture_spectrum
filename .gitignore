@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Rust / Cargo build artifacts
+target/
+
+# Workflow / tooling artifacts
+.slim/
+/.cargo/
+
+# Generated audio output
+*.wav
+
+# Test assets: only samples/lena.jpg is tracked
+samples/*
+!samples/lena.jpg

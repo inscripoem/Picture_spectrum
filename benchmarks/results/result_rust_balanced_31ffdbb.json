@@ -1,0 +1,30 @@
+{
+  "version": "rust_balanced",
+  "commit": "31ffdbb",
+  "system": {
+    "python": "3.13.3",
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "gpu": "NVIDIA GeForce RTX 3070, 8192 MiB"
+  },
+  "params": {
+    "sample_rate": 44100,
+    "start_freq": 10000,
+    "spacing_ms": 50,
+    "freq_step": 10
+  },
+  "timestamp": "2026-06-16 14:09:08",
+  "benchmarks": {
+    "xlarge": {
+      "rust": {
+        "median": 13.699696826006402,
+        "min": 13.627512653998565,
+        "max": 14.168253775002086,
+        "runs": [
+          13.627512653998565,
+          13.699696826006402,
+          14.168253775002086
+        ]
+      }
+    }
+  }
+}

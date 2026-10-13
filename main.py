@@ -24,15 +24,22 @@ def picture_spectrum(img ,hz ,q ,s ,z):             #生成频谱图
     size = img_cv.shape
     hi = size[0]
     wi = size[1]
-    data = sin_wave(0, 0, hz, 0, s)
-    wave = data
+    
+    # 预分配输出：初始零波 + hi 行
+    duration_samples = int(s / (1/hz) / 1000)
+    wave = np.zeros((hi + 1) * duration_samples)
+    
     for ho in range(hi):
+        data = np.zeros(duration_samples)  # 每行重置
         for wo in range(wi):
             a = img_cv[ho][wo] / 256
             f = wo * z + q
             data = data + sin_wave(a, f, hz, a, s)
-        data = data / wo
-        wave = np.hstack((data,wave))
+        data = data / wi
+        wave[(ho + 1) * duration_samples : (ho + 2) * duration_samples] = data
+    
+    # 反转以匹配原始堆叠顺序
+    wave = wave[::-1].copy()
     return wave
 
 wav = picture_spectrum(img ,hz ,q ,s ,z)
